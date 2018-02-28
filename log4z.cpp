@@ -1836,14 +1836,14 @@ bool LogerManager::openLogger(LogData * pLog)
         }
         if (LOG4Z_ALL_SYNCHRONOUS_OUTPUT)
         {
-            sprintf(buf, "%s_%s_%04d%02d%02d%02d_%s_%03u.log",
+            sprintf(buf, "%s_%s_%04d%02d%02d%02d_%s_%03u.txt",
                 _proName.c_str(), name.c_str(), t.tm_year + 1900, t.tm_mon + 1, t.tm_mday,
                 t.tm_hour, _pid.c_str(), pLogger->_curFileIndex);
         }
         else
         {
 
-            sprintf(buf, "%s_%s_%04d%02d%02d%02d%02d_%s_%03u.log",
+            sprintf(buf, "%s_%s_%04d%02d%02d%02d%02d_%s_%03u.txt",
                 _proName.c_str(), name.c_str(), t.tm_year + 1900, t.tm_mon + 1, t.tm_mday,
                 t.tm_hour, t.tm_min, _pid.c_str(), pLogger->_curFileIndex);
         }
